@@ -4,7 +4,6 @@ import entities.CarRental;
 import entities.Vehicle;
 import model.services.BrazilTaxService;
 import model.services.RentalService;
-import model.services.TaxService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,7 +27,7 @@ public class Main {
         System.out.print("Return Date (dd/mm/yyyy hh:mm): ");
         Date returnDate = simpleDateFormat.parse(scanner.nextLine());
 
-        CarRental carRental1 = new CarRental(startDate, returnDate, new Vehicle(carModel));
+        CarRental carRental1 = new CarRental(startDate, returnDate, new Vehicle());
 
         System.out.print("Enter price per hour: ");
         double pricePerHour = scanner.nextDouble();
